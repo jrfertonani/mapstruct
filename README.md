@@ -1,8 +1,8 @@
-# Projeto JAVA Spring Boot 
+# Projeto sobre o metodo mapstruct JAVA Spring Boot 
 
 
 ## Introdução
-Este projeto demonstra uma aplicação backend utilizando Spring Boot e MySql.
+Este projeto demonstra a utilização do metodo mapstruct.
 
 **Tecnologias:**
 * Java 17
@@ -16,8 +16,9 @@ Este projeto demonstra uma aplicação backend utilizando Spring Boot e MySql.
 ## Como Rodar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/jrfertonani/CRUD_basic.git
- - cd CRUD_basic
+   git clone https://github.com/jrfertonani/mapstruct.git
+ - cd mapstruct
+ - rodar o projeto na ide
 
 2. Acesse a aplicação em:
 - http://localhost:8080
