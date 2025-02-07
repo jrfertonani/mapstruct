@@ -1,10 +1,10 @@
 package backend.service;
 
 import backend._config.Exeptions.serviceExceptions.ObjectNotFoundException;
-import backend.entity.DTO.usuariosDTO;
-import backend.entity.model.Usuarios;
+import backend._config.Mapstruct.UsuarioMapper;
+import backend.entity.model.request.UsuarioRequest;
+import backend.entity.model.response.UsuarioResponse;
 import backend.repository.usuariosRepository;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,33 +15,30 @@ import java.util.List;
 public class usuariosService {
 
     @Autowired
-    public ModelMapper mapper;
+    public UsuarioMapper mapper;
 
     @Autowired
     public usuariosRepository repository;
 
+    public UsuarioResponse save(UsuarioRequest request){
 
-    public Usuarios save(usuariosDTO DTO) {
-        return repository.save(
-                mapper.map(DTO, Usuarios.class)
+        return mapper.toDto(
+                repository.save
+                        (mapper.toEntity(request)
+                        )
         );
     }
 
-    public List<Usuarios> findAll(){
-        return repository.findAll();
-    };
-
-    public Usuarios findById(Long id) {
-        return mapper.map(
-                repository.findById(id).orElseThrow(
-                        ()-> new ObjectNotFoundException("Usuario não encontrado ID: " + id)
-                ), Usuarios.class);
+    public List<UsuarioResponse> findAll(){
+        return mapper.toListResponse(
+                repository.findAll()
+        );
     }
 
-    public Usuarios upDate(Long id,usuariosDTO DTO){
-        findById(id);
-        return repository.save(
-                mapper.map(DTO, Usuarios.class)
+
+    public UsuarioResponse findById(Long id){
+        return mapper.toDto(
+                repository.findById(id).orElseThrow(()-> new ObjectNotFoundException("Objeto not foulnd"))
         );
     }
 
@@ -49,4 +46,5 @@ public class usuariosService {
         findById(id);
         repository.deleteById(id);
     }
+
 }
