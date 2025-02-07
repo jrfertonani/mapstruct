@@ -1,8 +1,8 @@
-# Projeto JAVA Spring Boot 
+# Projeto sobre o método mapstruct JAVA Spring Boot
 
 
 ## Introdução
-Este projeto demonstra uma aplicação backend utilizando Spring Boot e MySql.
+Este projeto demonstra uma aplicação  utilizando mapstructe MySql.
 
 **Tecnologias:**
 * Java 17
@@ -20,5 +20,5 @@ Este projeto demonstra uma aplicação backend utilizando Spring Boot e MySql.
  - cd CRUD_basic
 
 2. Acesse a aplicação em:
-- http://localhost:8080
+- http://localhost:8081/usuarios
 
