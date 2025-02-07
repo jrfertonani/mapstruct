@@ -21,5 +21,5 @@ Este projeto demonstra a utilização do metodo mapstruct.
  - rodar o projeto na ide
 
 2. Acesse a aplicação em:
-- http://localhost:8080
+- http://localhost:8081
 
