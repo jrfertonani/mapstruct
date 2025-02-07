@@ -16,7 +16,7 @@ Este projeto demonstra uma aplicação  utilizando mapstructe MySql.
 ## Como Rodar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/jrfertonani/CRUD_basic.git
+   git clone https://github.com/jrfertonani/mapstruct.git
  - cd CRUD_basic
 
 2. Acesse a aplicação em:
